@@ -2,6 +2,7 @@
 
 namespace FaSe22\PipelineBuilder;
 
+use FaSe22\PipelineBuilder\Commands\PipeBuilderCommand;
 use FaSe22\PipelineBuilder\Commands\PipelineBuilderCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -21,5 +22,16 @@ class PipelineBuilderServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasMigration('create_pipeline-builder_table')
             ->hasCommand(PipelineBuilderCommand::class);
+    }
+
+    public function boot()
+    {
+        // Register the command if we are using the application via the CLI
+
+        $this->commands([
+            PipelineBuilderCommand::class,
+            PipeBuilderCommand::class
+        ]);
+
     }
 }
