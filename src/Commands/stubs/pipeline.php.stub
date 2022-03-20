@@ -1,0 +1,21 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Pipeline\Pipeline;
+
+class DummyClass
+{
+   public function handle($request)
+       {
+             $pipes = [];
+
+                   return app(Pipeline::class)
+                       ->send($request)
+                       ->through($pipes)
+                       ->via('handle')
+                       ->then(function () {
+                          return true;
+                       });
+       }
+}
