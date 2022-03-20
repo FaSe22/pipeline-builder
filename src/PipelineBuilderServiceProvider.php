@@ -30,8 +30,7 @@ class PipelineBuilderServiceProvider extends PackageServiceProvider
 
         $this->commands([
             PipelineBuilderCommand::class,
-            PipeBuilderCommand::class
+            PipeBuilderCommand::class,
         ]);
-
     }
 }
