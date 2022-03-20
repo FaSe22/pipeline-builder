@@ -2,18 +2,31 @@
 
 namespace FaSe22\PipelineBuilder\Commands;
 
-use Illuminate\Console\Command;
+use Illuminate\Console\GeneratorCommand;
 
-class PipelineBuilderCommand extends Command
+class PipelineBuilderCommand extends GeneratorCommand
 {
-    public $signature = 'pipeline-builder';
+    public $signature = 'build:pipeline {name}';
 
     public $description = 'My command';
 
+    protected $type = 'Pipeline';
+
+
     public function handle(): int
     {
-        $this->comment('All done');
-
+        parent::handle();
         return self::SUCCESS;
     }
+
+    protected function getStub()
+    {
+        return __DIR__ . '/stubs/pipeline.php.stub';
+    }
+
+    protected function getDefaultNamespace($rootNamespace)
+    {
+        return $rootNamespace . '\Pipelines';
+    }
+
 }
