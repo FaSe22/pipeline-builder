@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace FaSe22\PipelineBuilder\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class PipelineBuilderCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'pipeline-builder';
 
     public $description = 'My command';
 

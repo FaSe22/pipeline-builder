@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "fase22/pipeline-builder",
+    "description": "build faster pipelines",
     "keywords": [
-        ":vendor_name",
+        "FaSe22",
         "laravel",
-        ":package_slug"
+        "pipeline-builder"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/fase22/pipeline-builder",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "sebastianfaber",
+            "email": "sebastianfaber90@gmail.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "FaSe22\\PipelineBuilder\\": "src",
+            "FaSe22\\PipelineBuilder\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "FaSe22\\PipelineBuilder\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "FaSe22\\PipelineBuilder\\PipelineBuilderServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "PipelineBuilder": "FaSe22\\PipelineBuilder\\Facades\\PipelineBuilder"
             }
         }
     },
