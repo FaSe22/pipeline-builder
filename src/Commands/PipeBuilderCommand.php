@@ -11,7 +11,6 @@ use Illuminate\Console\GeneratorCommand;
 
 class PipeBuilderCommand extends GeneratorCommand
 {
-
     public $signature = 'build:pipe {name}';
 
     public $description = 'Generate pipes';
@@ -21,9 +20,9 @@ class PipeBuilderCommand extends GeneratorCommand
     public function handle(): int
     {
         parent::handle();
+
         return self::SUCCESS;
     }
-
 
     protected function getStub()
     {
@@ -34,5 +33,4 @@ class PipeBuilderCommand extends GeneratorCommand
     {
         return $rootNamespace . '/Pipelines/Pipes';
     }
-
 }

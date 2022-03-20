@@ -12,10 +12,10 @@ class PipelineBuilderCommand extends GeneratorCommand
 
     protected $type = 'Pipeline';
 
-
     public function handle(): int
     {
         parent::handle();
+
         return self::SUCCESS;
     }
 
@@ -28,5 +28,4 @@ class PipelineBuilderCommand extends GeneratorCommand
     {
         return $rootNamespace . '\Pipelines';
     }
-
 }
